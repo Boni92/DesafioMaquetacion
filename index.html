@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio Maquetación</title>
   
+  
+
+  <!-- googleFont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font: Opensans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="public/bootstrap-5.1.3-dist/css/bootstrap.css">
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -13,70 +28,169 @@
 
 <body>
   <!-- ======= HEADER ======= -->
+
   <header>
-    <div>
+    <!-- <div>
       <div id="logo" class="logo">
         <img src="public/Logos/Logo_basico (1).svg" alt="logotipo">
       </div>
+
       <div id="menu" class="menu">
         <ion-icon name="menu-outline" ios="menu-outline" md="menu-outline" size="large"></ion-icon>
       </div>
-    </div>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg   fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="logo">
+          <img src="public/Logos/Logo_basico (1).png" alt="logotipo">
+        </a>
+      </div>
+
+      <div class="container-fluid positionA">
+        <div class="dropdown">
+          <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <ion-icon name="menu-outline" ios="menu-outline" md="menu-outline" size="large"></ion-icon>
+          </a>
+        
+          <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Opción 1</a></li>
+            <li><a class="dropdown-item" href="#">Opción 2</a></li>
+            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
   </header>
 
-    <!-- ======= MAIN ======= -->
+  <!-- ======= MAIN ======= -->
 
   <main>
+    
     <div class="contenedor">
-      <div id="registro">
-        <div class="texto">
-          <h2>Registrate</h2>
-          <p>Completá con los datos solicitados para poder ingresar</p>
-        </div>
-        <div class="form">
-          <label for=""></label>
-          <input type="text">
-          <label for=""></label>
-          <input type="text">
-          <label for=""></label>
-          <input type="month">
-          <label for=""></label>
-          <input type="">
-          <label for=""></label>
-          <input type="number">
-        </div>
-      </div>
-      <div id="direccion">
-        <div class="texto">
-          <h2>Dirección personal</h2>
-        </div>
-        <div class="form">
-          <label for=""></label>
-          <input type="text">
-          <label for=""></label>
-          <input type="text">
-          <label for=""></label>
-          <input type="number">
-          <label for=""></label>
-          <input type="checkbox">
-        </div>
-      </div>
+      <form action="" id="formulario" autocomplete="off">
 
-      <div id="btns">
-        <button class="volver">volver</button>
-        <button class="registrate">registrate</button>
-      </div>
+        <div id="registro">
+          <div class="texto">
+            <h2>Registrate</h2>
+            <p>Completá con los datos solicitados para poder ingresar</p>
+          </div>
+          <div class="formA">
+            <div class="bloques">
+              <div class="form_contenedor margen" id="campo_nombre">
+                <span class="span"></span>
+                <input class="caja" id="Nombre" type="text" name="nombre" placeholder="Ejemplo: Carlo1234">
+                <label for="Nombre" id="nombre_label" class="hovertext" datahover="Campo simple">Nombre *</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor margen">
+                <span class="span"></span>
+
+                <input class="caja" id="Apellido" type="text"name="apellido"  placeholder="Ejemplo: Carlo1234">
+                <label id="apellido_label" for="Apellido">Apellido *</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor ">
+                <span class="span"></span>
+
+                <input class="caja" id="Fecha" type="date" name="fecha">
+                <label id="fecha_label" for="Fecha">Fecha de nacimiento</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor margen">
+                <span class="span"></span>
+
+                <select class="caja" id="Selector">
+                  <option selected>Seleccionar</option>
+                  <option>Argentina</option>
+                  <option>Brasil</option>
+                  <option>Uruguay</option>
+                </select>
+                <label id="selector_label" for="Selector">Selector</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor margen">
+                <span class="span"></span>
+
+                <input class="caja" id="numeroA"  type="number" name="numeroA"  placeholder="0">
+                <label id="numeroA_label" for="numeroA">Selector de número</label>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+
+        <div id="direccionPersonal">
+          <div class="texto">
+            <h2>Dirección personal</h2>
+          </div>
+          <div class="formA">
+            <!-- inputs -->
+            <div class="bloques">
+              <div class="form_contenedor margen">
+                <span class="span"></span>
+
+              <input class="caja" id="Direccion" type="text" name="direccion"  placeholder="Ejemplo: Carlo1234">
+              <label id="direccion_label" for="Direccion">Dirección *</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor margen">
+                <span class="span"></span>
+
+                <input class="caja" id="Localidad" type="text" name="localidad"  placeholder="Ejemplo: Carlo1234">
+                <label id="localidad_label" for="Localidad">Localidad *</label>
+              </div>
+            </div>
+            <div class="bloques">
+              <div class="form_contenedor">
+                <span class="span"></span>
+
+                <input class="caja" id="numeroB" type="number" name="numeroB"  placeholder="0">
+                <label id="numeroB_label" for="numeroB">Selector de número</label>
+              </div>
+            </div>
+            <!-- checkbox -->
+            <div class="bloques">
+              <div class="form_contenedor check">
+                <input class="" id="checkbox" type="checkbox" placeholder="0">
+                <label for="checkbox" class="texto_checkbox">Acepto las políticas de provacidad & aviso legal *</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="btns">
+          <div>
+            <button class="volver" name="volver">volver</button>
+            <input type="submit" class="registrate" name="Registrate" value="Registrate"
+            id="btnRegistro"></input>
+          </div>
+          </div>
+
+      </form>
     </div>
   </main>
 
-    <!-- ======= FOOTER ======= -->
+  <!-- ======= FOOTER ======= -->
 
   <footer>
     <div>
+
+      <!-- ====Footer 1 -->
+
       <div id="footer1">
+
         <div class="logo2">
-          <img src="public/Logos/Logo_basico (2).svg" alt="logotipo2">
+          <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
         </div>
+
         <div id="lista_redes">
           <a href="" id="facebook" class="red">
             <img src="public/redes/resized/facebook.png" alt="">
@@ -94,10 +208,14 @@
             <img src="public/redes/resized/rss.png" alt="">
           </a>
         </div>
+
       </div>
+
+      <!-- ====Footer 2 -->
+
       <div id="footer2">
         <div class="logo2">
-          <img src="public/Logos/Logo_basico (2).svg" alt="logotipo2">
+          <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
         </div>
         <div id="informacion">
           <ul id="lista_informacion">
@@ -109,11 +227,19 @@
           </ul>
         </div>
       </div>
+
     </div>
   </footer>
 
   <!-- Icono (ionicons)-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="public/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+
+  <!-- javascript -->
+  <script src="script.js"></script>
 </body>
+
 </html>
