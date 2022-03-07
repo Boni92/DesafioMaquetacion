@@ -30,15 +30,8 @@
   <!-- ======= HEADER ======= -->
 
   <header>
-    <!-- <div>
-      <div id="logo" class="logo">
-        <img src="public/Logos/Logo_basico (1).svg" alt="logotipo">
-      </div>
 
-      <div id="menu" class="menu">
-        <ion-icon name="menu-outline" ios="menu-outline" md="menu-outline" size="large"></ion-icon>
-      </div>
-    </div> -->
+    <!-- Logo -->
 
     <nav class="navbar navbar-expand-lg   fixed-top">
       <div class="container-fluid">
@@ -47,22 +40,29 @@
         </a>
       </div>
 
-      <div class="container-fluid positionA">
+    <!-- Menu -->
+
+      <div class="container-fluid formato-position">
         <div class="dropdown">
+
+      <!-- Menu contraido -->
           <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             <ion-icon name="menu-outline" ios="menu-outline" md="menu-outline" size="large"></ion-icon>
           </a>
-        
-          <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Opción 1</a></li>
-            <li><a class="dropdown-item" href="#">Opción 2</a></li>
-            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+
+      <!-- Menu desplegado -->
+          <ul class="dropdown-menu dropdown-menu-lg-end formato-menu" aria-labelledby="dropdownMenuLink">
+
+            <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 1 <div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
+
+            <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 2<div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
+
+            <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 3<div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
           </ul>
+
         </div>
       </div>
-
     </nav>
-
   </header>
 
   <!-- ======= MAIN ======= -->
@@ -72,107 +72,158 @@
     <div class="contenedor">
       <form action="" id="formulario" autocomplete="off">
 
+      <!-- Seccion registro -->
         <div id="registro">
+
+          <!-- Texto -->
           <div class="texto">
             <h2>Registrate</h2>
             <p>Completá con los datos solicitados para poder ingresar</p>
           </div>
+
+          <!-- Bloques -->
           <div class="formA">
+
             <div class="bloques">
               <div class="form_contenedor margen" id="campo_nombre">
+
+              <!-- Texto alternativo -->
                 <span class="span"></span>
+              <!-- Input -->
                 <input class="caja" id="Nombre" type="text" name="nombre" placeholder="Ejemplo: Carlo1234">
+              <!-- Nombre input -->
                 <label for="Nombre" id="nombre_label" class="hovertext" datahover="Campo simple">Nombre *</label>
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor margen">
-                <span class="span"></span>
 
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
                 <input class="caja" id="Apellido" type="text"name="apellido"  placeholder="Ejemplo: Carlo1234">
-                <label id="apellido_label" for="Apellido">Apellido *</label>
+              <!-- Nombre input -->
+                <label id="apellido_label" for="Apellido" class="hovertext" datahover="Campo simple">Apellido *</label>
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor ">
-                <span class="span"></span>
 
-                <input class="caja" id="Fecha" type="date" name="fecha">
-                <label id="fecha_label" for="Fecha">Fecha de nacimiento</label>
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
+                <input class="caja" id="Fecha" type="date" name="fecha" min="1900-01-01">
+              <!-- Nombre input -->
+                <label id="fecha_label" for="Fecha" class="hovertext" datahover="Agenda">Fecha de nacimiento</label>
+
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor margen">
-                <span class="span"></span>
 
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
                 <select class="caja" id="Selector">
-                  <option selected>Seleccionar</option>
+                  <option id="seleccionada" >Seleccionar</option>
                   <option>Argentina</option>
                   <option>Brasil</option>
                   <option>Uruguay</option>
                 </select>
-                <label id="selector_label" for="Selector">Selector</label>
+              <!-- Nombre input -->
+                <label id="selector_label" for="Selector" class="hovertext" datahover="Selector">Selector</label>
+
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor margen">
-                <span class="span"></span>
 
-                <input class="caja" id="numeroA"  type="number" name="numeroA"  placeholder="0">
-                <label id="numeroA_label" for="numeroA">Selector de número</label>
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
+                <input class="caja" id="numeroA"  type="number" name="numeroA"  placeholder="0" min="0">
+              <!-- Nombre input -->
+                <label id="numeroA_label" for="numeroA" class="hovertext" datahover="Selector de número">Selector de número</label>
+
               </div>
             </div>
           
           </div>
+
         </div>
 
+      <!-- Seccion direccion -->
         <div id="direccionPersonal">
+
+          <!-- Texto -->
           <div class="texto">
             <h2>Dirección personal</h2>
           </div>
+
+          <!-- Bloques -->
           <div class="formA">
-            <!-- inputs -->
+
             <div class="bloques">
               <div class="form_contenedor margen">
-                <span class="span"></span>
 
-              <input class="caja" id="Direccion" type="text" name="direccion"  placeholder="Ejemplo: Carlo1234">
-              <label id="direccion_label" for="Direccion">Dirección *</label>
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
+                <input class="caja" id="Direccion" type="text" name="direccion"  placeholder="Ejemplo: Carlo1234">
+              <!-- Nombre input -->
+                <label id="direccion_label" for="Direccion" class="hovertext" datahover="Campo simple">Dirección *</label>
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor margen">
-                <span class="span"></span>
 
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
                 <input class="caja" id="Localidad" type="text" name="localidad"  placeholder="Ejemplo: Carlo1234">
-                <label id="localidad_label" for="Localidad">Localidad *</label>
+              <!-- Nombre input -->
+                <label id="localidad_label" for="Localidad" class="hovertext" datahover="Campo simple">Localidad *</label>
+
               </div>
             </div>
             <div class="bloques">
               <div class="form_contenedor">
-                <span class="span"></span>
 
-                <input class="caja" id="numeroB" type="number" name="numeroB"  placeholder="0">
-                <label id="numeroB_label" for="numeroB">Selector de número</label>
+              <!-- Texto alternativo -->
+                <span class="span"></span>
+              <!-- Input -->
+                <input class="caja" id="numeroB" type="number" name="numeroB"  placeholder="0" min="0">
+              <!-- Nombre input -->
+                <label id="numeroB_label" for="numeroB" class="hovertext" datahover="Selector de número">Selector de número</label>
+
               </div>
             </div>
+
             <!-- checkbox -->
             <div class="bloques">
               <div class="form_contenedor check">
-                <input class="" id="checkbox" type="checkbox" placeholder="0">
-                <label for="checkbox" class="texto_checkbox">Acepto las políticas de provacidad & aviso legal *</label>
+
+              <!-- Input -->
+                <input class="" id="checkbox" type="checkbox" placeholder="0" required>
+              <!-- Nombre input -->
+                <label for="checkbox" class="texto_checkbox hoverlabel" datahover="Texto">Acepto las políticas de provacidad & aviso legal *</label>              
+                <!-- Texto alternativo -->
+                <div id="sombra"></div>
+
               </div>
             </div>
           </div>
         </div>
 
+      <!-- Seccion botones -->
         <div id="btns">
           <div>
             <button class="volver" name="volver">volver</button>
+
             <input type="submit" class="registrate" name="Registrate" value="Registrate"
             id="btnRegistro"></input>
           </div>
-          </div>
+        </div>
 
       </form>
     </div>
@@ -183,28 +234,32 @@
   <footer>
     <div>
 
-      <!-- ====Footer 1 -->
+      <!-- ==== Footer 1 === -->
 
       <div id="footer1">
 
+        <!-- Logo -->
         <div class="logo2">
-          <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
+          <a href="#">
+              <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
+          </a>
         </div>
 
+        <!-- Redes -->
         <div id="lista_redes">
-          <a href="" id="facebook" class="red">
+          <a href="https://facebook.com"  target="_blank"id="facebook" class="red">
             <img src="public/redes/resized/facebook.png" alt="">
           </a>
-          <a href="" id="twitter" class="red">
+          <a href="https://twitter.com"  target="_blank"id="twitter" class="red">
             <img src="public/redes/resized/twitter.png" alt="">
           </a>
-          <a href="" id="instagram" class="red">
+          <a href="https://instagram.com"  target="_blank"id="instagram" class="red">
             <img src="public/redes/resized/instagram.png" alt="">
           </a>
-          <a href="" id="youtube" class="red">
+          <a href="https://youtube.com"  target="_blank"id="youtube" class="red">
             <img src="public/redes/resized/youtube.png" alt="">
           </a>
-          <a href="" id="rss" class="red">
+          <a href="https://rss.com" target="_blank" id="rss" class="red">
             <img src="public/redes/resized/rss.png" alt="">
           </a>
         </div>
@@ -214,9 +269,13 @@
       <!-- ====Footer 2 -->
 
       <div id="footer2">
+
+        <!-- Logo -->
         <div class="logo2">
           <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
         </div>
+
+        <!-- Info -->
         <div id="informacion">
           <ul id="lista_informacion">
             <li><a href="#">Boletín Oficial</a></li>
@@ -226,6 +285,7 @@
             <li><a href="#">Danos tu opinión</a></li>
           </ul>
         </div>
+        
       </div>
 
     </div>
