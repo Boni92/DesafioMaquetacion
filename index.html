@@ -46,20 +46,20 @@
         <div class="dropdown">
 
       <!-- Menu contraido -->
-          <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" accesskey="m">
             <ion-icon name="menu-outline" ios="menu-outline" md="menu-outline" size="large"></ion-icon>
           </a>
 
       <!-- Menu desplegado -->
-          <ul class="dropdown-menu dropdown-menu-lg-end formato-menu" aria-labelledby="dropdownMenuLink">
+          <ul class="dropdown-menu dropdown-menu-lg-end formato-menu" aria-labelledby="dropdownMenuLink" >
 
-            <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 1 <div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
+            <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 1 <div class="btn_cancelar"><ion-icon name="close-circle-outline" ></ion-icon></div></a></li>
 
             <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 2<div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
 
             <li class="formato-opcion"><a class="dropdown-item formato-item" href="#">Opción 3<div class="btn_cancelar"><ion-icon name="close-circle-outline"></ion-icon></div></a></li>
-          </ul>
 
+          </ul>
         </div>
       </div>
     </nav>
@@ -70,7 +70,7 @@
   <main>
     
     <div class="contenedor">
-      <form action="" id="formulario" autocomplete="off">
+      <form action="" method="get" enctype="formato-contenido" id="formulario" autocomplete="off">
 
       <!-- Seccion registro -->
         <div id="registro">
@@ -90,7 +90,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="Nombre" type="text" name="nombre" placeholder="Ejemplo: Carlo1234">
+                <input class="caja" id="Nombre" type="text" name="nombre" placeholder="Ejemplo: Carlo1234" tabindex="1" accesskey="N">
               <!-- Nombre input -->
                 <label for="Nombre" id="nombre_label" class="hovertext" datahover="Campo simple">Nombre *</label>
               </div>
@@ -101,7 +101,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="Apellido" type="text"name="apellido"  placeholder="Ejemplo: Carlo1234">
+                <input class="caja" id="Apellido" type="text"name="apellido"  placeholder="Ejemplo: Carlo1234" tabindex="2" accesskey="a">
               <!-- Nombre input -->
                 <label id="apellido_label" for="Apellido" class="hovertext" datahover="Campo simple">Apellido *</label>
               </div>
@@ -112,7 +112,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="Fecha" type="date" name="fecha" min="1900-01-01">
+                <input class="caja" id="Fecha" type="date" name="fecha" min="1900-01-01" max="2022-03-01" tabindex="3" accesskey="f">
               <!-- Nombre input -->
                 <label id="fecha_label" for="Fecha" class="hovertext" datahover="Agenda">Fecha de nacimiento</label>
 
@@ -124,7 +124,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <select class="caja" id="Selector">
+                <select class="caja" id="Selector" tabindex="4" accesskey="s">
                   <option id="seleccionada" >Seleccionar</option>
                   <option>Argentina</option>
                   <option>Brasil</option>
@@ -141,7 +141,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="numeroA"  type="number" name="numeroA"  placeholder="0" min="0">
+                <input class="caja" id="numeroA"  type="number" name="numeroA"  placeholder="0" min="0" tabindex="5" accesskey="e">
               <!-- Nombre input -->
                 <label id="numeroA_label" for="numeroA" class="hovertext" datahover="Selector de número">Selector de número</label>
 
@@ -169,7 +169,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="Direccion" type="text" name="direccion"  placeholder="Ejemplo: Carlo1234">
+                <input class="caja" id="Direccion" type="text" name="direccion"  placeholder="Ejemplo: Carlo1234" tabindex="6" accesskey="d">
               <!-- Nombre input -->
                 <label id="direccion_label" for="Direccion" class="hovertext" datahover="Campo simple">Dirección *</label>
               </div>
@@ -180,7 +180,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="Localidad" type="text" name="localidad"  placeholder="Ejemplo: Carlo1234">
+                <input class="caja" id="Localidad" type="text" name="localidad"  placeholder="Ejemplo: Carlo1234" tabindex="6" accesskey="l">
               <!-- Nombre input -->
                 <label id="localidad_label" for="Localidad" class="hovertext" datahover="Campo simple">Localidad *</label>
 
@@ -192,7 +192,7 @@
               <!-- Texto alternativo -->
                 <span class="span"></span>
               <!-- Input -->
-                <input class="caja" id="numeroB" type="number" name="numeroB"  placeholder="0" min="0">
+                <input class="caja" id="numeroB" type="number" name="numeroB"  placeholder="0" min="0" tabindex="7" accesskey="q">
               <!-- Nombre input -->
                 <label id="numeroB_label" for="numeroB" class="hovertext" datahover="Selector de número">Selector de número</label>
 
@@ -204,7 +204,7 @@
               <div class="form_contenedor check">
 
               <!-- Input -->
-                <input class="" id="checkbox" type="checkbox" placeholder="0" required>
+                <input class="" id="checkbox" type="checkbox" placeholder="0" tabindex="7" accesskey="p">
               <!-- Nombre input -->
                 <label for="checkbox" class="texto_checkbox hoverlabel" datahover="Texto">Acepto las políticas de provacidad & aviso legal *</label>              
                 <!-- Texto alternativo -->
@@ -218,10 +218,10 @@
       <!-- Seccion botones -->
         <div id="btns">
           <div>
-            <button class="volver" name="volver">volver</button>
+            <button class="volver" name="volver" tabindex="8" accesskey="v">volver</button>
 
             <input type="submit" class="registrate" name="Registrate" value="Registrate"
-            id="btnRegistro"></input>
+            id="btnRegistro" tabindex="9" accesskey="r"></input>
           </div>
         </div>
 
@@ -234,55 +234,55 @@
   <footer>
     <div>
 
-      <!-- ==== Footer 1 === -->
+      <!-- === Footer 1 === -->
 
       <div id="footer1">
 
         <!-- Logo -->
         <div class="logo2">
-          <a href="#">
+          <a href="#" tabindex="10">
               <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
           </a>
         </div>
 
         <!-- Redes -->
-        <div id="lista_redes">
-          <a href="https://facebook.com"  target="_blank"id="facebook" class="red">
+        <div id="lista_redes" class="lista_redes">
+          <a href="https://facebook.com"  target="_blank" id="facebook" class="red" tabindex="11">
             <img src="public/redes/resized/facebook.png" alt="">
           </a>
-          <a href="https://twitter.com"  target="_blank"id="twitter" class="red">
+          <a href="https://twitter.com"  target="_blank" id="twitter" class="red" tabindex="12">
             <img src="public/redes/resized/twitter.png" alt="">
           </a>
-          <a href="https://instagram.com"  target="_blank"id="instagram" class="red">
+          <a href="https://instagram.com"  target="_blank" id="instagram" class="red" tabindex="13">
             <img src="public/redes/resized/instagram.png" alt="">
           </a>
-          <a href="https://youtube.com"  target="_blank"id="youtube" class="red">
+          <a href="https://youtube.com"  target="_blank" id="youtube" class="red" tabindex="14">
             <img src="public/redes/resized/youtube.png" alt="">
           </a>
-          <a href="https://rss.com" target="_blank" id="rss" class="red">
+          <a href="https://rss.com" target="_blank" id="rss" class="red" tabindex="15">
             <img src="public/redes/resized/rss.png" alt="">
           </a>
         </div>
 
       </div>
 
-      <!-- ====Footer 2 -->
+      <!-- === Footer 2 === -->
 
       <div id="footer2">
 
         <!-- Logo -->
-        <div class="logo2">
+        <div class="logo2" tabindex="16">
           <img src="public/Logos/Logo_basico (2).png" alt="logotipo2">
         </div>
 
         <!-- Info -->
         <div id="informacion">
           <ul id="lista_informacion">
-            <li><a href="#">Boletín Oficial</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#">Oficios judiciales</a></li>
-            <li><a href="#">Danos tu opinión</a></li>
+            <li><a href="#" tabindex="17">Boletín Oficial</a></li>
+            <li><a href="#" tabindex="18">Términos y condiciones</a></li>
+            <li><a href="#" tabindex="19">Política de privacidad</a></li>
+            <li><a href="#" tabindex="20">Oficios judiciales</a></li>
+            <li><a href="#" tabindex="21">Danos tu opinión</a></li>
           </ul>
         </div>
         

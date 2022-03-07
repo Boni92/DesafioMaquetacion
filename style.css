@@ -1,4 +1,3 @@
-/* 24px */
 :root {
   --celesteClaro: #F3F6F9;
   --celesteOscuro: #DFE7F0;
@@ -15,7 +14,7 @@
   --amarilloMedio: #FFDB2E;
   --azulActivo: #007BC7;
 
-  --fontExtraChica: 1vw;  /*13px*/
+  --fontExtraChica: 13px;  /*13px*/
   --fontChica: 1.1vw; /*14px*/
   --fontMedia:16px; /*16px*/
   --fontGrande: 18px; /*18px*/
@@ -30,8 +29,6 @@
   --lineHeightExtraGrande:44px;
 
 }
-/* 24px */
-/* var(--lineHeightGrande) */
 html{
   margin: 0;
   padding: 0;
@@ -291,7 +288,6 @@ main{
               position: absolute;
               top: 25%;
             }
-          
         .check{
           display: flex;
           flex-direction: row;
@@ -356,7 +352,6 @@ main{
         #checkbox:checked ~#sombra,#checkbox:focus ~#sombra{
           visibility: hidden;
         }
-        
     #btns{
       width: 70.7vw;/*965px*/
     }   
@@ -453,69 +448,69 @@ footer{
   opacity: 1;
   border-top: var(--amarilloClaro) solid 3px;
 }
-footer > div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#footer1,#footer2{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 79.5vw;
-  height: calc(20.2vh/2);
-}
-#footer1{
-  border-bottom: solid 1px var(--celesteClaro);
-}
-.logo2{
-  display: flex;
-  justify-content: space;
-  align-items: center;
-}
-.logo2 img{
-  height: auto;
-  width: 18.8vw;
-  transform: translateX(-20px);
-}
-#lista_redes{
-  width: auto;
-  height: auto;
-}
-#lista_redes a img{
+  footer > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer1,#footer2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 79.5vw;
+    height: calc(20.2vh/2);
+  }
+  #footer1{
+    border-bottom: solid 1px var(--celesteClaro);
+  }
+    .logo2{
+      display: flex;
+      justify-content: space;
+      align-items: center;
+    }
+      .logo2 img{
+        height: auto;
+        width: 18.8vw;
+        transform: translateX(-20px);
+      }
+    .lista_redes{
+      width: auto;
+      height: auto;
+    }
+      .lista_redes a img{
   transform: scale(.7);
   margin-left: 8px;
-}
-#instagram img{
-  transform: scale(.54) !important;
-}
-#rss img{
-  transform: scale(.44) !important;
-}
-#informacion{
-  text-align: right;
-}
-#lista_informacion{
-  display: flex;
-}
-#lista_informacion li{
-  list-style: none;
-  margin-right: 20px;
-  text-decoration: underline;
-  text-decoration-color: var(--blanco);
-}
-#lista_informacion li a{
-  text-decoration: none;
-  font-family: 'var(--fontFamily2)', sans-serif;
-  font-weight: 600;
-  font-size: 1.1vw;/*14px*/
-  word-spacing: 0px;
-  line-height: var(--lineHeightChica);
-  color: var(--blanco);
-  text-align: left;
-}
-
+      }
+        #instagram img{
+          transform: scale(.54) !important;
+        }
+        #rss img{
+          transform: scale(.44) !important;
+        }
+    #informacion{
+      text-align: right;
+    }
+      #lista_informacion{
+        display: flex;
+        }
+        #lista_informacion li{
+          list-style: none;
+          margin-right: 20px;
+          text-decoration: underline;
+          text-decoration-color: var(--blanco);
+        }
+          #lista_informacion li a{
+            text-decoration: none;
+            font-family: 'var(--fontFamily2)', sans-serif;
+            font-weight: 600;
+            font-size: 1.1vw;/*14px*/
+            word-spacing: 0px;
+            line-height: var(--lineHeightChica);
+            color: var(--blanco);
+            text-align: left;
+          }
+          
 /* ======MEDIA QUERY====== */
 @media only screen and (min-width: 2560px) {
   .texto p{
@@ -536,7 +531,6 @@ footer > div{
     position: absolute;
     font-size: var(--fontMedia);
     padding-top: 1px;
-
   }
 }
 @media only screen and (max-width: 1364px) {
@@ -577,6 +571,9 @@ footer > div{
     position: absolute;
     font-size: var(--fontMedia);
     padding-top: 1px;
+  }
+  #Nombre,#Apellido{
+    width: 300px;
   }
 }
 @media only screen and (max-width: 426px) {

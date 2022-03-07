@@ -11,46 +11,48 @@ window.onload = () => {
 
   arrayInput.forEach(inputElement => {
     // Funcion de error
-    inputElement.addEventListener('change',(e)=>{
+    inputElement.addEventListener('change', (e) => {
       // Variables
       textoElement = e.target.value
       inputIndex = arrayInput.indexOf(inputElement)
 
       // Incumplimiento
-      if(textoElement.length>=10){
-        if(inputElement.type=="text"){
+      if (textoElement.length >= 10) {
+        if (inputElement.type == "text") {
           arraySpan[inputIndex].classList.remove("asistencia");
           arraySpan[inputIndex].innerHTML = "Máximo 10 caracteres"
           inputElement.classList.remove("ok")
           inputElement.classList.add("error")
-        }else if(inputElement.type==="select-one"){
+        } else if (inputElement.type === "select-one") {
           arraySpan[inputIndex].innerHTML = "Seleccioná una nacionalidad"
           inputElement.classList.remove("ok");
           inputElement.classList.add("error")
         }
-        else if(inputElement.type==="date" && !inputElement.checkValidity()){
+        else if (inputElement.type === "date" && !inputElement.checkValidity()) {
           arraySpan[inputIndex].classList.remove("asistencia");
           arraySpan[inputIndex].innerHTML = "Seleccioná una fecha"
           inputElement.classList.remove("ok");
           inputElement.classList.add("error")
         }
-        else{
+        else {
           arraySpan[inputIndex].innerHTML = ""
+          inputElement.classList.remove("error");
+
         }
       }
       // campo vacio
-      else if(textoElement===""){
+      else if (textoElement === "") {
         arraySpan[inputIndex].innerHTML = ""
-        inputElement.classList.remove("ok","error");
+        inputElement.classList.remove("ok", "error");
       }
       // campo igual a 0
-      else if(textoElement==='0'){
+      else if (textoElement === '0') {
         inputElement.classList.remove("ok");
-        inputElement.classList.add ("error");
+        inputElement.classList.add("error");
         arraySpan[inputIndex].innerHTML = "Seleccioná un equipaje"
       }
       // campo correcto
-      else if(textoElement.length<10 && textoElement.length>0){
+      else if (textoElement.length < 10 && textoElement.length > 0) {
         arraySpan[inputIndex].innerHTML = "";
         inputElement.classList.remove("error");
         inputElement.classList.add("ok");
@@ -59,37 +61,36 @@ window.onload = () => {
 
     // Funcion de asistencia
 
-    inputElement.addEventListener('focus',()=>{
+    inputElement.addEventListener('focus', () => {
       // Variables
       textoElement = inputElement.value
       inputIndex = arrayInput.indexOf(inputElement)
 
       // Campo vacio
-      if(textoElement ===""){
+      if (textoElement === "") {
         // Funcion de tiempo
         setTimeout(() => {
           // Primer intervalo hasta respuesta
-          if(textoElement=="" || inputElement.type==="select-one"){
+          if (textoElement == "" || inputElement.type === "select-one") {
             // Segundo intervalo segun input
             setTimeout(() => {
-              if(textoElement===""){
-              arraySpan[inputIndex].innerHTML="Texto de asistencia"
-              arraySpan[inputIndex].className="asistencia"}
+              if (textoElement === "") {
+                arraySpan[inputIndex].innerHTML = "Texto de asistencia"
+                arraySpan[inputIndex].className = "asistencia"
+              }
             }, 1000);
           }
-          else if(arraySpan[inputIndex].innerHTML!="Máximo 10 caracteres" || arraySpan[inputIndex].innerHTML!="Seleccioná un equipaje"){
-            arraySpan[inputIndex].innerHTML=""
-            arraySpan[inputIndex].className=""
+          else if (arraySpan[inputIndex].innerHTML != "Máximo 10 caracteres" || arraySpan[inputIndex].innerHTML != "Seleccioná un equipaje") {
+            arraySpan[inputIndex].innerHTML = ""
+            arraySpan[inputIndex].className = ""
           }
         }, 4000);
       }
     })
 
-
     // Función campo requerido al Submit
 
     btnRegistro.addEventListener('click',(e)=>{
-
       // Variables
       textoElement = inputElement.value
 
@@ -134,39 +135,40 @@ window.onload = () => {
         let spanNumeroB = document.getElementById('numeroB_label');
         spanNumeroB.innerHTML="Equipaje *"
         spanNumeroB.className="requerido"
-
-
-        e.preventDefault()
       }
-    
-    })
-
-    inputElement.addEventListener('change',()=>{
-      inputElement.setCustomValidity(inputElement.value.length<10)
-      console.log(inputElement.checkValidity());
-      console.log(inputElement.setCustomValidity());
     })
   });
 
-
   // Input Selector
   let selector = document.getElementById("Selector")
-  if(selector.value=="Seleccionar"){
+  if (selector.value == "Seleccionar") {
     selector.classList.add("deseleccionada");
   }
-  selector.addEventListener('change',()=>{
+  selector.addEventListener('change', () => {
 
-    if(selector.value=="Seleccionar"){
+    if (selector.value == "Seleccionar") {
       selector.classList.add("deseleccionada");
       console.log(selector.value);
-    }else if(selector.value!="Seleccionar"){
+    } else if (selector.value != "Seleccionar") {
       selector.classList.remove("deseleccionada");
     }
   })
-
 };
 
+// Submit formulario
+let formSubmit = document.getElementById('formulario')
+formSubmit.addEventListener('submit', (e) => {
 
+  nombre = document.getElementById("Nombre").value;
+  apellido = document.getElementById("Apellido").value;
+  direccion = document.getElementById("Direccion").value;
+  localidad = document.getElementById("Localidad").value;
+  aceptar = document.getElementById("checkbox");
 
-
-
+  if (nombre == "" || nombre.length > 9 || apellido == "" || apellido.length > 9 || direccion == "" || direccion.length > 9 || localidad == "" || localidad.length > 9) {
+    e.preventDefault()
+  }
+  else if (!aceptar.checked) {
+    e.preventDefault()
+  }
+})
